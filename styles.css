@@ -1,3 +1,5 @@
+/* styles.css */
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -12,7 +14,7 @@ body {
 }
 
 header {
-    background-color: darkcyan;
+    background-color: rgb(94, 196, 237);
     color: rgb(4, 4, 4);
     padding: 0px;
 }
@@ -29,13 +31,15 @@ header {
 }
 
 .logo img {
-    width: 99px;
-    height: 100px;
+    width: 50px; /* Adjust the size as needed */
+    height: 50px; /* Adjust the size as needed */
     margin-right: 10px;
 }
 
-.logo h1{
-    font-family: serif;
+.logo h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px; /* Adjust the size as needed */
+    margin: 0;
 }
 
 .header-controls {
@@ -44,19 +48,21 @@ header {
 }
 
 .search-bar {
-    margin-right: 10px;
+    margin-right: 40px;
 }
 
 .search-bar input {
     padding: 10px;
+    font-size: 18px; /* Adjust the size as needed */
 }
 
 .search-bar button {
     padding: 10px;
-    background-color: #4CAF50;
+    background-color: #212b21;
     color: white;
     border: none;
     cursor: pointer;
+    font-size: 16px; /* Adjust the size as needed */
 }
 
 .location {
@@ -64,21 +70,32 @@ header {
 }
 
 .location label {
-    margin-right: 5px;
+    margin-right: 10px;
 }
 
 .location select {
     padding: 8px;
+    font-size: 20px;
+    margin-right: 5px; /* Adjust the size as needed */
 }
 
 .filter select {
     padding: 10px;
+    font-size: 20px; /* Adjust the size as needed */
+}
+
+.cart {
+    margin-left: auto;
 }
 
 .cart a {
     text-decoration: none;
     color: white;
-    font-size: 20px;
+    font-size: 20px; /* Adjust the size as needed */
+    border: 1px solid black;/* Different background color for the cart */
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 40px;
 }
 
 .main {
@@ -112,6 +129,8 @@ header {
     color: white;
     border: none;
     cursor: pointer;
+    font-size: 16px; /* Adjust the size as needed */
+    margin-top: 10px; /* Add margin to separate from the button */
 }
 
 .rent-btn:hover {
