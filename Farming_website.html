@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGRARYANS Equipment Rental</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color:whitesmoke;
+        }
+
+        header {
+            background-color: skyblue;
+            color: #ffffff;
+        }
+
+        .jumbotron {
+            background-image: url('./Firefly\ tractor\ working\ in\ farm\ and\ harvesting\ rice\ and\ picking\ up\ 32529.jpg');
+            background-size: cover;
+            background-position: center;
+            color: black;
+            padding: 150px 0;
+        }
+
+        .advantages-section {
+            background-color: #ffffff;
+            padding: 50px 0;
+        }
+
+        .advantage-box {
+            background-color: #dee2e6;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .advantage-box img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .modal-content {
+            background-color: #ffffff;
+        }
+
+        .featured-equipment-section {
+            background-color: #f8f9fa;
+            padding: 100px 0;
+        }
+
+        .featured-equipment-card {
+            border: 1px solid #dee2e6;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .featured-equipment-card img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background-color: skyblue;
+            color: #ffffff;
+            padding: 20px 0;
+        }
+        div.container{
+           margin-bottom: 350px ;
+        }
+
+        .nav-item{
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="#">
+        <img src="./Firefly Farm & Field Logo 79648.jpg" alt="Company Logo" width="50" height="50">
+        AGRARYANS 
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="./about.html">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal">Login</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+   <!-- Banner Section -->
+<section class="container-fluid p-0">
+    <div class="jumbotron jumbotron-fluid text-center" style="margin-top: 20px;">
+        <div class="container">
+            <h1 class="display-4 mt-5">Revolutionize Your Farming with AGRARYANS</h1>
+            <p class="lead">Discover the benefits of modern agricultural machinery for efficient and sustainable farming.</p>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Advantages Section -->
+    <section class="container mt-5 advantages-section">
+        <h2 class="text-center mb-4">Machinery in Agriculture</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="advantage-box">
+                    <img src="path/to/your/image1.jpg" alt="Advantage 1" class="img-fluid">
+                    <h4 class="mt-3">Increased Efficiency</h4>
+                    <p>Modern machinery helps in performing tasks quickly and efficiently, saving time and resources.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="advantage-box">
+                    <img src="path/to/your/image2.jpg" alt="Advantage 2" class="img-fluid">
+                    <h4 class="mt-3">Precision Farming</h4>
+                    <p>Utilize technology for precise planting, fertilizing, and harvesting, leading to better crop yields.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="advantage-box">
+                    <img src="path/to/your/image3.jpg" alt="Advantage 3" class="img-fluid">
+                    <h4 class="mt-3">Cost Savings</h4>
+                    <p>Reduce labor costs and optimize resources with the use of advanced agricultural machinery.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Equipment Section -->
+    <section class="container mt-5 featured-equipment-section">
+        <h2 class="text-center mb-4">Featured Equipment</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="featured-equipment-card">
+                    <img src="./Firefly tractors 52004.jpg" alt="Featured Equipment 1" class="img-fluid">
+                    <h4 class="mt-3">Tractor</h4>
+                    <p>Powerful tractors for all your farming needs. Rent now for efficient plowing and cultivation.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="featured-equipment-card">
+                    <img src="./Firefly rice harvester 85543.jpg" alt="Featured Equipment 2" class="img-fluid">
+                    <h4 class="mt-3">Harvester</h4>
+                    <p>State-of-the-art harvesters for quick and precise harvesting. Boost your productivity with our equipment.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="featured-equipment-card">
+                    <img src="./Firefly seed sowing machine - working in the farm paddy saplings 33490.jpg" alt="Featured Equipment 3" class="img-fluid">
+                    <h4 class="mt-3">Seeder</h4>
+                    <p>Eliminated the need for transplantation and hours of manual work , reducing labour needs </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="false">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="loginSection">
+                    <form>
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" id="username" placeholder="Enter your username">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                    <p class="mt-3">Don't have an account? <a href="#" onclick="showSignUp()">Sign Up</a></p>
+                </div>
+                <!-- SignUp Section -->
+<div id="signUpSection" style="display: none;">
+    <form>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="firstName">First Name</label>
+                <input type="text" class="form-control" id="firstName" placeholder="Enter your first name">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="lastName">Last Name</label>
+                <input type="text" class="form-control" id="lastName" placeholder="Enter your last name">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="usernameSignUp">Username</label>
+            <input type="text" class="form-control" id="usernameSignUp" placeholder="Choose a username">
+        </div>
+        <div class="form-group">
+            <label for="passwordSignUp">Password</label>
+            <input type="password" class="form-control" id="passwordSignUp" placeholder="Choose a password">
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+        </div>
+        <div class="form-group">
+            <label for="location">Location</label>
+            <input type="text" class="form-control" id="location" placeholder="Enter your location">
+        </div>
+        <div class="form-group">
+            <label for="userTypeSignUp">Sign Up As:</label>
+            <select class="form-control" id="userTypeSignUp">
+                <option value="farmer">Farmer</option>
+                <option value="owner">Owner</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-success">Sign Up</button>
+    </form>
+    <p class="mt-3">Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+</div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    function showSignUp() {
+        document.getElementById('loginSection').style.display = 'none';
+        document.getElementById('signUpSection').style.display = 'block';
+    }
+
+    function showLogin() {
+        document.getElementById('loginSection').style.display = 'block';
+        document.getElementById('signUpSection').style.display = 'none';
+    }
+
+    function handleLogin(event) {
+        // Add your login logic here
+        // Assuming login is successful, redirect to another page
+        window.location.href = '';
+
+        // Prevent the form from submitting the traditional way
+        event.preventDefault();
+    }
+</script>
+
+
+
+    <!-- Footer Section -->
+    <footer class="text-center">
+        <p>&copy; 2024 AGRARYANS Equipment Rental. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
