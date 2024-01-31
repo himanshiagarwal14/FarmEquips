@@ -228,6 +228,15 @@
                             <input type="text" class="form-control" id="location" placeholder="Enter your location">
                         </div>
                         <div class="form-group">
+                            <label for="aadharNumber">Aadhar Card Number</label>
+                            <input type="text" class="form-control" id="aadharNumber" placeholder="Enter your Aadhar Card Number">
+                        </div>
+                
+                        <div class="form-group">
+                            <label for="panNumber">PAN Card Number</label>
+                            <input type="text" class="form-control" id="panNumber" placeholder="Enter your PAN Card Number">
+                        </div>
+                        <div class="form-group">
                             <label for="userTypeSignUp">Sign Up As:</label>
                             <select class="form-control" id="userTypeSignUp">
                                 <option value="farmer">Farmer</option>
@@ -282,6 +291,16 @@
     function isValidLocation(location) {
         return location.trim() !== '';
     }
+    function isValidAadharNumber(aadharNumber) {
+    // Customize based on your requirements
+    return /^\d{12}$/.test(aadharNumber);
+    }
+
+// Function to validate PAN card number
+    function isValidPANNumber(panNumber) {
+    // Customize based on your requirements
+    return /^[a-zA-Z]{5}[0-9]{4}[a-zA-Z]{1}$/.test(panNumber);
+    }  
 
     // Function to handle signup form submission
     function handleSignUp(event) {
@@ -292,9 +311,12 @@
         var passwordSignUp = document.getElementById('passwordSignUp').value;
         var phone = document.getElementById('phone').value;
         var location = document.getElementById('location').value;
+        var aadharNumber = document.getElementById('aadharNumber').value;
+        var panNumber = document.getElementById('panNumber').value;
 
         // Perform client-side validation
-        if (!isValidName(firstName) || !isValidName(lastName) || !isValidUsername(usernameSignUp) || !isValidPassword(passwordSignUp) || !isValidPhoneNumber(phone) || !isValidLocation(location)) {
+        if (!isValidName(firstName) || !isValidName(lastName) || !isValidUsername(usernameSignUp) || !isValidPassword(passwordSignUp) || !isValidPhoneNumber(phone) || !isValidLocation(location)|| !isValidAadharNumber(aadharNumber) ||
+        !isValidPANNumber(panNumber)) {
             // Display an error message or perform any necessary actions
             alert('Invalid input. Please check your details.');
 
