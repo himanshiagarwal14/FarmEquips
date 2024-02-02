@@ -1,5 +1,3 @@
-<!-- equip.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,15 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Farm Equipment Rentals</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/4e97f0f302.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
     <header>
         <div class="container">
             <div class="header-content">
                 <div class="logo">
                     <img src="logo.png" alt="Company Logo">
-                    <h1>FARM EQUIPS</h1>
                 </div>
                 <div class="header-controls">
                     <div class="search-bar">
@@ -25,25 +22,33 @@
                     <div class="location">
                         <label for="location">Location:</label>
                         <select id="location" name="location">
-                            <option value="Ahemdabad">Ahemdabad</option>
-                            <option value="Bengaluru">Bengaluru</option>
-                            <option value="Kolkata">Kolkata</option>
-                            <option value="Chennai">Chennai</option>
+                            <option value="null" selected>Select State</option>
+                            <option value="Punjab">Punjab</option>
+                            <option value="Harayana">Harayana</option>
+                            <option value="Bihar">Bihar</option>
+                            <option value="Maharashtra">Maharashtra</option>
                         </select>
                     </div>
                     <div class="filter">
                         <select>
                             <option value="all">All Categories</option>
-                            <option value="plows">Plows</option>
+                            <option value="cultivator">Cutivators</option>
                             <option value="harvestors">Harvestors</option>
                             <option value="tractors">Tractors</option>
                             <option value="seed-sowing-machine">Seed Sowing Machine</option>
                             <option value="sprayers">Sprayers</option>
                             <option value="tiller">Tiller</option>
+                            <option value="trailer">Trailer</option>
+                            <option value="baler">Baler</option>
+                            <option value="thresher">Thresher</option>
+                            <option value="water Pump">Water Pump</option>
+                            <option value="cage wheel">Cage Wheel</option>
+                            <option value="plows">Plows</option>
                         </select>
                     </div>
                     <div class="cart">
-                        <a href="./cart.html" class="cart-icon">   🛒</a>
+                        <a href="cart.html" class="icon"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="profile.html" class="icon"><i class="fa-solid fa-user"></i></a>
                     </div>
                 </div>
             </div>
@@ -53,59 +58,153 @@
     <main class="container">
         <div class="equipment">
             <div class="equipment-item">
-                <img src="plow.webp" alt="Plow Image">
-                <h2>Plow</h2>
-                <p class="description">Designed to break, loosen, and turn over soil, preparing it for planting crops. Improves soil structure, enhances water absorption, and buries crop residues.</p>
-                <p class="price">Starts from ₹1000/day</p>
-                <button class="rent-btn">Rent Now</button>
+                <div class="equipment-image">
+                    <img src="cultivator.jpg" alt="Cultivator Image">
+                </div>
+                <div class="equipment-content">
+                    <h2>Cutivators</h2>
+                    <p class="description">Designed to stir the soil around a crop as it matures to promote growth and destroy weeds. </p>
+                    <p class="price">Starts from ₹1500/day</p>
+                    <button class="rent-btn">Rent Now</button>
+                </div>
             </div>
 
             <div class="equipment-item">
-                <img src="Harvestors.jpeg" alt="Harvestors Image">
-                <h2>Harvestors</h2>
-                <p class="description">Designed to efficiently gather mature crops from fields.</p>
-                <p class="price">Starts from ₹1500/day</p>
-                <button class="rent-btn">Rent Now</button>
+                <div class="equipment-image">
+                    <img src="Harvestors.jpeg" alt="Harvestors Image">
+                </div>
+                <div class="equipment-content">
+                    <h2>Harvestors</h2>
+                    <p class="description">Designed to efficiently gather mature crops from fields.</p>
+                    <p class="price">Starts from ₹2000/day</p>
+                    <button class="rent-btn">Rent Now</button>
+                </div>
             </div>
 
             <div class="equipment-item">
-                <img src="Tractors.jpeg" alt="Tractors Image">
-                <h2>Tractors</h2>
-                <p class="description">Designed to provide the necessary horsepower for a variety of tasks, including plowing, planting, cultivating, and transporting goods across the farm.</p>
-                <p class="price">Starts from ₹1500/day</p>
-                <button class="rent-btn">Rent Now</button>
+                <div class="equipment-image">
+                    <img src="tractors.jpeg" alt="Tractors Image">
+                </div>
+                <div class="equipment-content">
+                    <h2>Tractors</h2>
+                    <p class="description">Designed for diverse agricultural tasks and efficient on-farm transportation.</p>
+                    <p class="price">Starts from ₹2500/day</p>
+                    <button class="rent-btn">Rent Now</button>
+                </div>
             </div>
 
             <div class="equipment-item">
-                <img src="./seedsowing.jpeg" alt="Seed-sowing-machine Image">
-                <h2>Seed-sowing-machine</h2>
-                <p class="description">Designed to automate the process of planting seeds in the field. Enhances the precision of seed placement, contributing to efficient and uniform crop establishment.</p>
-                <p class="price">Starts from ₹600/day</p>
-                <button class="rent-btn">Rent Now</button>
+                <div class="equipment-image">
+                    <img src="seedsowing.jpeg" alt="seed-sowing-machine Image">
+                </div>
+                <div class="equipment-content">
+                    <h2>Seed-sowing-machine</h2>
+                    <p class="description">Designed for automated seed planting, optimizing precision for uniform crop establishment.</p>
+                    <p class="price">Starts from ₹800/day</p>
+                    <button class="rent-btn">Rent Now</button>
+                </div>
             </div>
 
             <div class="equipment-item">
-                <img src="sprayer.jpeg" alt="Sprayer Image">
-                <h2>Sprayers</h2>
-                <p class="description">Designed to apply pesticides, herbicides, fertilizers, or other agricultural chemicals to crops. Also provides essential nutrients for plant growth.</p>
-                <p class="price">Starts from ₹400/day</p>
-                <button class="rent-btn">Rent Now</button>
+                <div class="equipment-image">
+                    <img src="sprayer.jpeg" alt="sprayer Image">
+                </div>
+                <div class="equipment-content">
+                    <h2>Sprayers</h2>
+                    <p class="description">Designed for precise application of chemicals and nutrients to boost plant growth.</p>
+                    <p class="price">Starts from ₹600/day</p>
+                    <button class="rent-btn">Rent Now</button>
+                </div>
             </div>
 
             <div class="equipment-item">
-                <img src="tiller.jpeg" alt="Tiller Image">
-                <h2>Tiller</h2>
-                <p class="description">Designed to prepare and cultivate the soil for planting by breaking up compacted earth, incorporating organic matter, and creating a suitable seedbed.</p>
-                <p class="price">Starts from ₹500/day</p>
-                <button class="rent-btn">Rent Now</button>
+                <div class="equipment-image">
+                    <img src="tiller.jpeg" alt="Tiller Image">
+                </div>
+                <div class="equipment-content">
+                    <h2>Tiller</h2>
+                    <p class="description">Designed for optimal planting by breaking soil, incorporating organics, and leveling.</p>
+                    <p class="price">Starts from ₹900/day</p>
+                    <button class="rent-btn">Rent Now</button>
+                </div>
+            </div>
+            
+            <div class="equipment-item">
+                <div class="equipment-image">
+                    <img src="trailer.jpg" alt="Trailer Image">
+                </div>
+                <div class="equipment-content">
+                    <h2>Trailer</h2>
+                    <p class="description">Designed to transport heavy or bulky machinery and equipment over long distances.</p>
+                    <p class="price">Starts from ₹700/day</p>
+                    <button class="rent-btn">Rent Now</button>
+                </div>
+            </div>
+
+            <div class="equipment-item">
+                <div class="equipment-image">
+                    <img src="baler.jpg" alt="Baler Image">
+                </div>
+                <div class="equipment-content">
+                    <h2>Baler</h2>
+                    <p class="description">Designed to compress harvested crops into compact, manageable bales for transportation.</p>
+                    <p class="price">Starts from ₹2000/day</p>
+                    <button class="rent-btn">Rent Now</button>
+                </div>
+            </div>
+
+            <div class="equipment-item">
+                <div class="equipment-image">
+                    <img src="thresher.jpg" alt="Thresher Image">
+                </div>
+                <div class="equipment-content">
+                    <h2>Thresher</h2>
+                    <p class="description">Designed to separate small grains and seeds from chaff and straw.</p>
+                    <p class="price">Starts from ₹1500/day</p>
+                    <button class="rent-btn">Rent Now</button>
+                </div>
+            </div>
+
+            <div class="equipment-item">
+                <div class="equipment-image">
+                    <img src="waterpump.jpg" alt="Water Pump Image">
+                </div>
+                <div class="equipment-content">
+                    <h2>Water Pump</h2>
+                    <p class="description">Designed to lift water from below the surface of a body of water, such as a lake or stream.</p>
+                    <p class="price">Starts from ₹700/day</p>
+                    <button class="rent-btn">Rent Now</button>
+                </div>
+            </div>
+
+            <div class="equipment-item">
+                <div class="equipment-image">
+                    <img src="cagewheel.jpg" alt="Cage Wheel Image">
+                </div>
+                <div class="equipment-content">
+                    <h2>Cage Wheel</h2>
+                    <p class="description">Designed to to mix the soil properly while preparing the land for crop plantation.</p>
+                    <p class="price">Starts from ₹500/day</p>
+                    <button class="rent-btn">Rent Now</button>
+                </div>
+            </div>
+
+            <div class="equipment-item">
+                <div class="equipment-image">
+                    <img src="plow.jpg" alt="Plow Image">
+                </div>
+                <div class="equipment-content">
+                    <h2>Plow</h2>
+                    <p class="description">Designed for breaking, loosening, and turning soil to enhance planting preparation.</p>
+                    <p class="price">Starts from ₹1000/day</p>
+                    <button class="rent-btn">Rent Now</button>
+                </div>
             </div>
         </div>
     </main>
-
-    <!-- Bootstrap JS and Popper.js -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.8/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <footer class="text-center">
+        <p>&copy; 2024 FarmFlow Rentals. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
