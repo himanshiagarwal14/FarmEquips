@@ -1,165 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rental Cart</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            background-color: #f8f8f8;
-            color: #333;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-
-        header {
-            background-color:darkcyan;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-            width: 100%;
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 36px;
-        }
-
-        main {
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-        }
-
-        .cart,
-        .order-summary {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            width: 48%;
-            box-sizing: border-box;
-            margin-bottom: 20px;
-        }
-
-        .cart-item,
-        .order-summary h2 {
-            margin-bottom: 15px;
-        }
-
-        .cart-item:last-child,
-        .order-summary h2:last-child {
-            margin-bottom: 0;
-        }
-
-        .product-info {
-            display: flex;
-            align-items: center;
-        }
-
-        .product-info img {
-            max-width: 100px; /* Smaller image */
-            height: auto;
-            border-radius: 10px;
-            margin-right: 15px;
-        }
-
-        .product-details {
-            flex-grow: 1;
-        }
-
-        .product-details h2 {
-            font-size: 24px;
-            margin-bottom: 8px;
-        }
-
-        .product-details p {
-            font-size: 16px;
-            color: #777;
-        }
-
-        .quantity-btn {
-            margin-left: auto; /* Move the quantity buttons to the right */
-            display: flex;
-            align-items: center;
-        }
-
-        .quantity-btn button {
-            background-color: darkcyan;
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 18px;
-            padding: 10px;
-            border-radius: 5px;
-            margin: 0 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .quantity-btn button:hover {
-            background-color: darkcyan;
-        }
-
-        .total h3 {
-            font-size: 28px;
-            font-weight: bold;
-            margin: 15px 0 10px;
-            text-align: right;
-        }
-
-        .checkout-btn {
-            padding: 20px;
-            background-color: darkcyan;
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 18px;
-            border-radius: 10px;
-            transition: background-color 0.3s ease;
-            display: block;
-            width: 100%;
-            text-align: center;
-        }
-
-        .checkout-btn:hover {
-            background-color: #c03514;
-        }
-
-        .order-summary table {
+        table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 20px;
+            margin-bottom: 20px;
         }
 
-        .order-summary th,
-        .order-summary td {
+        th, td {
             border: 1px solid #ddd;
-            padding: 15px;
+            padding: 8px;
             text-align: left;
         }
 
-        .order-summary th {
-            background-color: darkcyan;
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .checkout-btn {
+            background-color: #4CAF50;
             color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
     </style>
 </head>
-
 <body>
-
     <header>
         <div class="container">
             <h1>Rental Cart</h1>
@@ -167,159 +40,66 @@
     </header>
 
     <main class="container">
-        <div class="cart">
-            <div class="cart-item">
-                <div class="product-info">
-                    <img src="plow.webp" alt="Plow Image">
-                    <div class="product-details">
-                        <h2>Plow</h2>
-                        <p class="price" id="price1">1000</p>
-                    </div>
-                </div>
-                <div class="quantity-btn">
-                    <button onclick="updateQuantity('quantity1', 'price1', 1000, 'totalAmount', '-')">-</button>
-                    <p class="quantity" id="quantity1">1</p>
-                    <button onclick="updateQuantity('quantity1', 'price1', 1000, 'totalAmount', '+')">+</button>
-                </div>
-            </div>
-
-            <div class="cart-item">
-                <div class="product-info">
-                    <img src="./Harvestors.jpeg" alt="Harvestor Image">
-                    <div class="product-details">
-                        <h2>Harvestor</h2>
-                        <p class="price" id="price2">1500</p>
-                    </div>
-                </div>
-                <div class="quantity-btn">
-                    <button onclick="updateQuantity('quantity2', 'price2', 1500, 'totalAmount', '-')">-</button>
-                    <p class="quantity" id="quantity2">1</p>
-                    <button onclick="updateQuantity('quantity2', 'price2', 1500, 'totalAmount', '+')">+</button>
-                </div>
-            </div>
-
-            <div class="cart-item">
-                <div class="product-info">
-                    <img src="./seedsowing.jpeg" alt="Seed Sowing Machine Image">
-                    <div class="product-details">
-                        <h2>Seed Sowing Machine</h2>
-                        <p class="price" id="price3">600</p>
-                    </div>
-                </div>
-                <div class="quantity-btn">
-                    <button onclick="updateQuantity('quantity3', 'price3', 600, 'totalAmount', '-')">-</button>
-                    <p class="quantity" id="quantity3">1</p>
-                    <button onclick="updateQuantity('quantity3', 'price3', 600, 'totalAmount', '+')">+</button>
-                </div>
-            </div>
-
-            <div class="total">
-                <h3>Total: $<span id="totalAmount">3100</span></h3>
-                <button class="checkout-btn">Checkout</button>
-            </div>
-        </div>
-
-        <div class="order-summary">
-            <h2>Order Summary</h2>
-            <table class="order-summary">
-                <thead>
-                    <tr>
-                        <th>Item</th>
-                        <th>Quantity</th>
-                        <th>Subtotal</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Plow</td>
-                        <td id="quantity1">1</td>
-                        <td id="totalAmount1">$1000</td>
-                    </tr>
-                    <tr>
-                        <td>Harvestor</td>
-                        <td id="quantity2">1</td>
-                        <td id="totalAmount2">$1500</td>
-                    </tr>
-                    <tr>
-                        <td>Seed Sowing Machine</td>
-                        <td id="quantity3">1</td>
-                        <td id="totalAmount3">$600</td>
-                    </tr>
-                </tbody>
-            </table>
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody id="cart">
+                <!-- Cart items will be dynamically added here using JavaScript -->
+            </tbody>
+        </table>
+        <!-- Inside your cart.html page -->
+        <button onclick="clearCart()">Clear Cart</button>
+   
+        <div class="total">
+            <h3>Total: ₹<span id="totalAmount">0</span></h3>
+            <button class="checkout-btn">Proceed to Checkout</button>
         </div>
     </main>
 
+    <script src="./script.js"></script>
     <script>
-        // Function to update quantity and recalculate totals
-        function updateQuantity(quantityId, priceId, itemPrice, totalAmountId, operation) {
-            var quantityElement = document.getElementById(quantityId);
-            var priceElement = document.getElementById(priceId);
+        // Fetch the cart items from localStorage
+        const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
 
-            var currentQuantity = parseInt(quantityElement.innerText);
-            var currentPrice = parseInt(priceElement.innerText);
+        // Function to update the cart page
+        
+function updateCart() {
+    const cartContainer = document.querySelector('.cart');
+    const totalAmountElement = document.getElementById('totalAmount');
 
-            if ((operation === '+' && currentQuantity < 10) || (operation === '-' && currentQuantity > 1)) {
-                quantityElement.innerText = operation === '+' ? currentQuantity + 1 : currentQuantity - 1;
+    // Clear the existing cart content
+    cartContainer.innerHTML = '';
 
-                var updatedPrice = currentPrice * parseInt(quantityElement.innerText);
-                priceElement.innerText = updatedPrice;
+    // Iterate through the cart items and display them in the cart
+    cartItems.forEach(item => {
+        const cartItemElement = document.createElement('div');
+        cartItemElement.classList.add('cart-item');
 
-                updateTotalAmount();
-                updateOrderSummary();
-            }
-        }
+        cartItemElement.innerHTML = `
+            <div class="product-info">
+                <h2>${item.name}</h2>
+                <p class="price">$${item.price}</p>
+                <p class="quantity">Quantity: ${item.quantity}</p>
+            </div>
+        `;
 
-        // Function to update total amount
-        function updateTotalAmount() {
-            var price1 = parseInt(document.getElementById('price1').innerText);
-            var quantity1 = parseInt(document.getElementById('quantity1').innerText);
-            document.getElementById('totalAmount1').innerText = price1 * quantity1;
+        cartContainer.appendChild(cartItemElement);
+    });
 
-            var price2 = parseInt(document.getElementById('price2').innerText);
-            var quantity2 = parseInt(document.getElementById('quantity2').innerText);
-            document.getElementById('totalAmount2').innerText = price2 * quantity2;
+    // Calculate and display the total amount
+    const totalAmount = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+    totalAmountElement.innerText = totalAmount;
+}
 
-            var price3 = parseInt(document.getElementById('price3').innerText);
-            var quantity3 = parseInt(document.getElementById('quantity3').innerText);
-            document.getElementById('totalAmount3').innerText = price3 * quantity3;
 
-            var totalAmount = price1 * quantity1 + price2 * quantity2 + price3 * quantity3;
-            document.getElementById('totalAmount').innerText = totalAmount;
-        }
-
-        // Function to update order summary table
-        function updateOrderSummary() {
-            var items = [
-                { name: 'Plow', priceId: 'price1', quantityId: 'quantity1' },
-                { name: 'Harvestor', priceId: 'price2', quantityId: 'quantity2' },
-                { name: 'Seed Sowing Machine', priceId: 'price3', quantityId: 'quantity3' }
-            ];
-
-            var tableBody = document.querySelector('.order-summary tbody');
-            tableBody.innerHTML = '';
-
-            items.forEach(function (item) {
-                var itemName = item.name;
-                var itemPrice = parseInt(document.getElementById(item.priceId).innerText);
-                var itemQuantity = parseInt(document.getElementById(item.quantityId).innerText);
-                var itemSubtotal = itemPrice * itemQuantity;
-
-                var row = document.createElement('tr');
-                row.innerHTML = `
-                    <td>${itemName}</td>
-                    <td>${itemQuantity}</td>
-                    <td>$${itemSubtotal}</td>
-                `;
-
-                tableBody.appendChild(row);
-            });
-        }
-
-        // Add initial order summary when the page loads
-        updateOrderSummary();
+        // Initialize the cart page when it loads
+        updateCartPage();
     </script>
-
 </body>
-
 </html>
