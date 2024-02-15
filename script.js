@@ -55,6 +55,25 @@ function updateCart() {
     // Calculate and display the total amount
     const totalAmount = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
     totalAmountElement.innerText = totalAmount;
+
+    console.log("total amt", totalAmount)
+    
+
+    const btn = document.getElementById('submit-btn')
+
+    console.log("btn",btn)
+
+    btn.innerHTML = "asdhjkasdjhkashd"
+
+    // console.log("Total",Total)
+
+
+    // Total.innerText=`Total: Rs.${totalAmount}`
+
+    // console.log("--------------")
+    // console.log("total amt", totalAmount)
+    // console.log("Total",Total)
+
 }
 
 function clearCart() {
