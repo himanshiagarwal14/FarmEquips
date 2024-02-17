@@ -17,6 +17,8 @@ function addToCart(itemName, itemPrice) {
             price: itemPrice,
             quantity: 1
         });
+        // updateCart();
+        // updateLocalStorage();
     }
 
     // Store the updated cartItems in localStorage
@@ -36,7 +38,6 @@ function updateCart() {
     // Iterate through the cart items and display them in the cart table
     cartItems.forEach(item => {
         const cartRow = document.createElement('tr');
-
         cartRow.innerHTML = `
             <td>${item.name}</td>
             <td>₹${item.price}</td>
@@ -54,25 +55,17 @@ function updateCart() {
 
     // Calculate and display the total amount
     const totalAmount = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+
+    const submitvalue = document.getElementById("submit-btn").value=totalAmount;
+
+    const banksubmit = document.getElementById("submit-bank").value=totalAmount;
+
+    
     totalAmountElement.innerText = totalAmount;
 
     console.log("total amt", totalAmount)
     
-
-    const btn = document.getElementById('submit-btn')
-
-    console.log("btn",btn)
-
-    btn.innerHTML = "asdhjkasdjhkashd"
-
-    // console.log("Total",Total)
-
-
-    // Total.innerText=`Total: Rs.${totalAmount}`
-
-    // console.log("--------------")
-    // console.log("total amt", totalAmount)
-    // console.log("Total",Total)
+    
 
 }
 
